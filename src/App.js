@@ -39,6 +39,9 @@ getPNR(){
       item1:res.data.from_station.name,
       item2:res.data.train.name,
       item3:res.data.passenger,
+      item4:res.data.total_passengers,
+      item5:res.data.train.number,
+      item6:res.data.doj,
     })    
   })
 }
@@ -101,7 +104,7 @@ getvalue(e){
         </SubMenu>
         <SubMenu
           title={
-            <span className="submenu-title-wrapper">
+            <span className="submenu-title-wrapper se">
               <Icon type="" />
               <Search placeholder="input search text" onSearch={value => console.log(value)} enterButton />
                
@@ -147,6 +150,7 @@ getvalue(e){
         <List.Item className="align"><h2>TO-STATION-  {this.state.item}</h2></List.Item>
         <List.Item  className="align"><h2>FROM-STATION-{this.state.item1}</h2></List.Item>
         <List.Item  className="align"><h2>TRAIN-NAME-{this.state.item2}</h2></List.Item>
+        
         <List.Item>{this.state.item3}</List.Item> 
       </List>
       </div>
